@@ -4,8 +4,7 @@ from flask import Flask
 
 app = Flask(__name__)
 
-if __name__ == '__main__':
-    app.run(port=5552, debug=True)
+
 
 @app.route('/')
 def index():
@@ -45,4 +44,7 @@ def math(num1, operation, num2):
         return "Invalid operation. Supported operations are +, -, *, div, and %."
 
     return str(result)
+
+if __name__ == '__main__':
+    app.run(port=5552, debug=True)
   
